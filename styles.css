@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity */
+    font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* https://developer.mozilla.org/pt-BR/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    --white-color: #f7f7f8;
+    --black-color: #0e0e10;
+    --black-alt-color: #1f1f23;
+    --gray-dark-color: #53535f;
+    --gray-light-color: rgba(0, 0, 0, 0.05);
+    --primary-color: #9147ff;
+    --primary-dark-color: #8533ff;
+    --alt-box-shadow: 0 0 0 0.25rem rgb(229 151 0 / 50%);
+}
+
+.navbar {
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px, rgb(0 0 0 / 5%) 0px 0px 4px;
+    padding-top: 0.25rem; /* 4px */
+    padding-bottom: 0.25rem; /* 4px */
+}
+
+.logo {
+    fill: var(--primary-color);
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: var(--primary-dark-color);
+    border-color: var(--primary-dark-color);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-dark-color);
+    border-color: var(--primary-dark-color);
+}
+
+.btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
+    box-shadow: var(--alt-box-shadow);
+}
+
+.navbar .dropdown-toggle {
+    color: var(--black-color);
+    padding: initial;
+}
+
+/* https://www.w3schools.com/cssref/sel_after.asp */
+.navbar .dropdown-toggle::after {
+    content: none;
+}
+
+.link-primary, .link-primary:hover {
+    color: var(--primary-color);
+}
+
+.link-primary:active, .link-primary:focus, .link-primary:active:focus {
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.navbar .dropdown-menu[data-bs-popper] {
+    left: initial;
+    right: 0;
+}
+
+.h1 {
+    color: var(--black-color);
+    font-weight: 700;
+    font-size: calc(2rem + 1.5vw);
+}
+
+.live-list-title {
+    color: var(--gray-dark-color);
+    font-size: 0.8125rem; /* 13px */
+}
+
+.live-list .card {
+    width: 64vw;
+    min-width: initial;
+    margin-right: 1rem; /* 16px */
+}
+
+.live-list .card-text {
+    font-size: 0.875rem; /* 14px */
+}
+
+.live-list-card-top-badge {
+    z-index: 1;
+    width: initial;
+    height: initial;
+    top: 0.5rem; /* 8px */
+    left: 0.5rem; /* 8px */
+}
+
+.live-list-card-viewers {
+    font-size: 0.8125rem; /* 13px */
+    width: initial;
+    height: initial;
+    top: calc(100% - 1.71875rem);
+    left: 0.5rem; /* 8px */
+}
+
+.live-list-card-bottom-badge {
+    background-color: var(--gray-light-color);
+    color: var(--gray-dark-color);
+}
+
+.live-list {
+    overflow-x: scroll;
+}
